@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const news = require("../../controller/department/news");
+const insertNews = require("../../controller/department/news");
 
-router.post("/", news.insertNews);
+router.post("/", insertNews);
 
 module.exports = router;
