@@ -7,11 +7,13 @@ const app = express();
 const port = 8000;
 
 const newsRouter = require("./routes/department/news");
+const dashboardDataRouter=require("./routes/student/studentDashboard")
 
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/api/news", newsRouter);
+app.use("/api/student/dashboard", dashboardDataRouter);
 
 app.listen(port, () => {
     console.log(`App is running at Port ${port}`);
