@@ -6,12 +6,13 @@ const { MongoClient } = require("mongodb");
 const app = express();
 const port = 8000;
 
-const newsRouter = require("./routes/department/news");
+const newsRouter = require("./routes/department/insertNews");
 const dashboardDataRouter = require("./routes/student/studentDashboard");
 const suggestionDataRouter = require("./routes/student/suggestion");
 const suggestionViewDataRouter = require("./routes/department/suggestionView");
 const viewNewsRouter = require("./routes/student/suggestion");
 const insertStudentDetailsRouter = require("./routes/department/insertStudentDetails")
+const getNewsRouter = require("./routes/department/viewNews")
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -22,6 +23,7 @@ app.use("/api/student/suggestion", suggestionDataRouter);
 app.use("/api/department/suggestionView", suggestionViewDataRouter);
 app.use("/api/student/viewNews", viewNewsRouter);
 app.use("/api/department/studentDetails", insertStudentDetailsRouter);
+app.use("/api/department/viewNews", getNewsRouter);
 
 
 
