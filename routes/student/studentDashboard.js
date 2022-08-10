@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { getDashboardData } = require("../../controller/student/studentDashboard");
 
-router.get("/", getDashboardData);
+router.post("/", getDashboardData);
 
 module.exports = router;
