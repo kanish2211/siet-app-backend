@@ -1,0 +1,9 @@
+const mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+const {ObjectId}= mongoose.Schema;
+
+const studentSchema=new Schema({
+    nme:{}
+
+    
+})
